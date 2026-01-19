@@ -4,7 +4,7 @@ A feature-rich calendar application built with React, TypeScript, and ShadCN UI 
 
 <img width="1790" height="977" alt="Screenshot 2025-08-05 at 15 00 40" src="https://github.com/user-attachments/assets/0f7bd8a4-59b2-4f4d-aaa9-b0655129e474" />
 
-**Live Demo:** [https://calendar.jeraidi.tech](https://calendar.jeraidi.tech)
+**Live Demo:** [https://calendar.jeraidi.dev](https://calendar.jeraidi.dev)
 
 ## Key Features
 
@@ -23,7 +23,7 @@ A feature-rich calendar application built with React, TypeScript, and ShadCN UI 
 Use your preferred package manager to install the calendar component directly from the custom ShadCN UI registry:
 
 ```bash
-npx shadcn@latest add "https://calendar.jeraidi.tech/r/full-calendar.json"
+npx shadcn@latest add "https://calendar.jeraidi.dev/r/full-calendar.json"
 ```
 
 ## Usage
