@@ -1,8 +1,8 @@
 import { ArrowUpRight, CalendarIcon, GithubIcon, LinkIcon } from "lucide-react";
 import Link from "next/link";
-import React, { Suspense } from "react";
-import { Calendar } from "@/modules/components/calendar/calendar";
-import { CalendarSkeleton } from "@/modules/components/calendar/skeletons/calendar-skeleton";
+import { Suspense } from "react";
+import { Calendar } from "@/features/calendar/calendar";
+import { CalendarSkeleton } from "@/features/calendar/skeletons/calendar-skeleton";
 
 export default function CalendarPage() {
 	return (
