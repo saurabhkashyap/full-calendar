@@ -44,26 +44,36 @@ export default function CalendarPage() {
 }
 ```
 
+## Tech Stack
+
+- **Framework**: Next.js 16 (Turbopack) & React 19
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4
+- **Components**: ShadCN UI & Radix UI
+- **Animations**: Motion 12 (formerly framer-motion)
+- **State Management**: React Context + Hooks
+- **Validation**: Zod 4
+- **Date Handling**: date-fns & React Day Picker 9
+
 ## Project Structure
 
 Here's an overview of the important files and directories in the project:
 
 ```
 src/
-├── modules/
-│   └── components/
-│       └── calendar/
-│           ├── calendar.tsx          # Main entry point component. Fetches data and wraps the app in providers.
-│           ├── contexts/
-│           │   ├── calendar-context.tsx  # Core state management (events, users, view state, filters).
-│           │   └── dnd-context.tsx       # Drag-and-drop context provider.
-│           ├── header/
-│           │   └── calendar-header.tsx   # Top navigation bar (view switcher, date nav, filters).
-│           ├── views/                    # Contains specific view components (Day, Week, Month, Year, Agenda).
-│           ├── calendar-body.tsx         # Renders the active view based on current state.
-│           ├── helpers.ts                # Core utility functions for date manipulation and calendar logic.
-│           ├── hooks.ts                  # Custom hooks for calendar logic.
-│           └── types.ts                  # TypeScript definitions for events, users, and views.
+├── features/
+│   └── calendar/
+│       ├── calendar.tsx          # Main entry point component. Fetches data and wraps the app in providers.
+│       ├── contexts/
+│       │   ├── calendar-context.tsx  # Core state management (events, users, view state, filters).
+│       │   └── dnd-context.tsx       # Drag-and-drop context provider.
+│       ├── header/
+│       │   └── calendar-header.tsx   # Top navigation bar (view switcher, date nav, filters).
+│       ├── views/                    # Contains specific view components (Day, Week, Month, Year, Agenda).
+│       ├── calendar-body.tsx         # Renders the active view based on current state.
+│       ├── helpers.ts                # Core utility functions for date manipulation and calendar logic.
+│       ├── hooks.ts                  # Custom hooks for calendar logic.
+│       └── types.ts                  # TypeScript definitions for events, users, and views.
 ```
 
 ## How It Works
@@ -71,17 +81,14 @@ src/
 The project is architected around a central context provider that manages the state of the calendar. Here is the high-level flow:
 
 1.  **Initialization**:
-
     - The `Calendar` component (`src/components/calendar/calendar.tsx`) serves as the entry point.
     - It fetches initial data (events and users) and initializes the `CalendarProvider`.
 
 2.  **State Management**:
-
     - `CalendarContext` holds the application state, including the current view (Day, Week, Month, etc.), selected date, list of events, and active filters.
     - It uses `localStorage` to persist user preferences such as the preferred view, time format (12h/24h), and badge styles.
 
 3.  **Rendering Logic**:
-
     - The `CalendarHeader` allows users to navigate dates, switch views, and apply filters.
     - The `CalendarBody` listens to the `view` state from the context and dynamically renders the appropriate view component (e.g., `MonthView`, `WeekView`).
 
