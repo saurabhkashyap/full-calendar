@@ -32,8 +32,8 @@ Import and use the `Calendar` component in your page:
 
 ```tsx
 import React, { Suspense } from "react";
-import { Calendar } from "@/modules/components/calendar/calendar";
-import { CalendarSkeleton } from "@/modules/components/calendar/skeletons/calendar-skeleton";
+import { Calendar } from "@/features/calendar/calendar";
+import { CalendarSkeleton } from "@/features/calendar/skeletons/calendar-skeleton";
 
 export default function CalendarPage() {
   return (
